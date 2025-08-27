@@ -1,11 +1,15 @@
 meta {
   name: By ID
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: {{URL}}tenants
+  url: {{URL}}tenants?id=06fa94e2-444d-4786-b335-1e95778d2a6b
   body: none
   auth: inherit
+}
+
+params:query {
+  id: 06fa94e2-444d-4786-b335-1e95778d2a6b
 }

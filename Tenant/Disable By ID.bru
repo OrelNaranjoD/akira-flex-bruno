@@ -1,0 +1,15 @@
+meta {
+  name: Disable By ID
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{URL}}tenants/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 06fa94e2-444d-4786-b335-1e95778d2a6b
+}

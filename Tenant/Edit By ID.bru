@@ -1,0 +1,23 @@
+meta {
+  name: Edit By ID
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}tenants/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 06fa94e2-444d-4786-b335-1e95778d2a6b
+}
+
+body:json {
+  {
+    "subdomain": "repusa_edited",
+    "active": true,
+    "maxUsers": 5
+  }
+}
