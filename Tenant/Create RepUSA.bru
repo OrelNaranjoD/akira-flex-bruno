@@ -1,0 +1,26 @@
+meta {
+  name: Create RepUSA
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}tenants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "RepUSA",
+    "subdomain": "repusa",
+    "email": "admin@repusa.com",
+    "phone": "+1234567890",
+    "maxUsers": 10,
+    "modules": [
+      "finance",
+      "inventory",
+      "sales"
+    ]
+  }
+}

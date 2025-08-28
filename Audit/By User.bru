@@ -1,0 +1,20 @@
+meta {
+  name: By User
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}audit/user/:userId
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 1
+  ~limit: 5
+}
+
+params:path {
+  userId: 4b971e36-87ec-4fa4-95a7-6f5feb605847
+}
