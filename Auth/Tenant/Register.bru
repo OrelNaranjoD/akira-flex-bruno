@@ -1,0 +1,25 @@
+meta {
+  name: Register
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}auth/tenant/:tenantId/register
+  body: json
+  auth: inherit
+}
+
+params:path {
+  tenantId: 06fa94e2-444d-4786-b335-1e95778d2a6b
+}
+
+body:json {
+  {
+    "email": "juan.perez@repusa.com",
+    "password": "User123!",
+    "firstName": "Juan",
+    "lastName": "Pérez",
+    "phone": "+525512345678"
+  }
+}

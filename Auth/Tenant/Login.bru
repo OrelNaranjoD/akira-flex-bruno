@@ -1,0 +1,26 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}auth/tenant/:tenantId/login
+  body: json
+  auth: inherit
+}
+
+params:path {
+  tenantId: 06fa94e2-444d-4786-b335-1e95778d2a6b
+}
+
+body:json {
+  {
+    "email": "juan.perez@repusa.com",
+    "password": "User123!"
+  }
+}
+
+vars:post-response {
+  ACCESS_TOKEN: res.body.accessToken
+}
