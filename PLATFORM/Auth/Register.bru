@@ -1,18 +1,18 @@
 meta {
   name: Register
   type: http
-  seq: 3
+  seq: 2
 }
 
 post {
-  url: {{URL}}auth/platform/register
+  url: {{URL}}platform/auth/register
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "email": "admin@akiraflex.com",
+    "email": "admin@akiraflex.cl",
     "password": "SuperAdmin123!",
     "firstName": "Platform",
     "lastName": "Administrator",
