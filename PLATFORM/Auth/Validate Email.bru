@@ -1,0 +1,19 @@
+meta {
+  name: Validate Email
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}auth/verify-email?token={{TOKEN}}
+  body: none
+  auth: none
+}
+
+params:query {
+  token: {{TOKEN}}
+}
+
+vars:post-response {
+  ACCESS_TOKEN: res.body.accessToken
+}

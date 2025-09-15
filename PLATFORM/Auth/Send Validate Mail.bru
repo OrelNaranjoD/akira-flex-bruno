@@ -1,0 +1,21 @@
+meta {
+  name: Send Validate Mail
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{URL}}auth/resend-verification
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "orelnaranjo@gmail.com"
+  }
+}
+
+vars:post-response {
+  TOKEN: res.body.token
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Register User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{URL}}auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "orelnaranjo@gmail.com",
+    "password": "SuperAdmin123!",
+    "firstName": "Orel",
+    "lastName": "Naranjo",
+    "phone": "+525566667777",
+    "roles": [
+      "OWNER"
+    ]
+  }
+}
+
+vars:post-response {
+  TOKEN: res.body.token
+}
